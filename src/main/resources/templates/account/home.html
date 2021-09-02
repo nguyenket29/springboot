@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<title>Register</title>
+<link rel="stylesheet" th:href="@{/register/css/bootstrap.min.css}">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+	<div sec:authorize="isAuthenticated()">
+		<a th:href="@{/logout}">Logout</a>
+		<span sec:authentication="principal.firstName"></span>
+	</div>
+	<!-- Main content -->
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Why Spring Security?</h5>
+
+							<p class="card-text">Why do we need Spring Security? What are
+								the benefits?</p>
+
+							<a href="#" class="card-link">Learn More</a>
+						</div>
+					</div>
+
+					<div class="card card-primary card-outline">
+						<div class="card-body">
+							<h5 class="card-title">How Spring Security Works?</h5>
+
+							<p class="card-text">How Spring security works internally? We
+								will see in details how it works internally</p>
+							<a href="#" class="card-link">Learn More</a>
+						</div>
+					</div>
+					<!-- /.card -->
+				</div>
+				<!-- /.col-md-6 -->
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="m-0">Video Lesson 1</h5>
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">We will Start our journey with
+								setting up our spring security course.</h6>
+							<a href="#" class="card-link">Start</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /.col-md-6 -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container-fluid -->
+	<!-- /.content -->
+</body>
+</html>
